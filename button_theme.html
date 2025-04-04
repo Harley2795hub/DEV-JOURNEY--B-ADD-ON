@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark theme</title>
+    <style>
+      body.theme-on {
+        background: linear-gradient(to right, #434343 0%, black 100%);
+      }
+
+      button {
+        margin: 30px;
+        font-size: 20px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        display: block;
+        transition: all 0.5 ease-in-out;
+      }
+      button:active {
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+      }
+      body.theme-on button {
+        background: white;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Dark theme</button>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        body.classList.add("theme-on");
+      }
+      let themeButton = document.querySelector("button");
+
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
